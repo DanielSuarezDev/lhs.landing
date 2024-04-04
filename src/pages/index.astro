@@ -1,27 +1,28 @@
 ---
-import Layout from "@/layouts/Layout.astro"
+import Layout from "@/layouts/Layout.astro";
 
-import AboutMe from "@/components/AboutMe.astro"
-import Briefcase from "@/components/icons/Briefcase.astro"
-import CodeIcon from "@/components/icons/Code.astro"
-import Experience from "@/components/Experience.astro"
-import ProfileCheck from "@/components/icons/ProfileCheck.astro"
-import Projects from "@/components/Projects.astro"
-import SectionContainer from "@/components/SectionContainer.astro"
-import Hero from "@/components/Hero.astro"
+import AboutMe from "@/components/AboutMe.astro";
+import Briefcase from "@/components/icons/Briefcase.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+import Experience from "@/components/Experience.astro";
+import ProfileCheck from "@/components/icons/ProfileCheck.astro";
+import Projects from "@/components/Projects.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Hero from "@/components/Hero.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
+import BadgeFloat from "@/components/BadgeFloat.astro";
+import Banner from "@/components/Banner.astro";
 ---
 
 <Layout
-  title="Porfolio de midudev - Desarrollador y Programador Web con 15 años de experiencia"
-  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+  title="Lighthouse School - Centro de tutorias semipersonalizada"
+  description="Centro de tutorias semipersonalizada"
+  image="/images/logo.jpg"
 >
-  <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
-    </SectionContainer>
-    <div class="space-y-24">
+  <main class="w-full bg-[#ffe900] h-screen">
+      <Hero />
+  </main>
+  <div class="space-y-24 bg-image">
     <SectionContainer id="experiencia">
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
@@ -52,5 +53,21 @@ import Hero from "@/components/Hero.astro"
       <AboutMe />
     </SectionContainer>
   </div>
-  </main>
+  <SpeedInsights />
+
+  <style>
+    .bg-image {
+      background-image: url("https://sox.sg/wp-content/uploads/2022/02/single-dotted.png");
+      background-repeat: repeat;
+      padding: 60px 15px;
+      background-size: auto;
+    }
+
+    @media screen and (max-width: 768px) {
+      .bg-image {
+        padding: 0 0 40px;
+        background-size: 5%;
+      }
+    }
+  </style>
 </Layout>
