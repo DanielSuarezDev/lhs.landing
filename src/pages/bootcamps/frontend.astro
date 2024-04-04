@@ -1,0 +1,179 @@
+---
+import BlogPost from "../../components/BlogPost.astro";
+import Layout from "../../layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+const pageTitle = "My Astro Learning Blog";
+---
+
+<Layout
+  title="Bootcamp Frontend"
+  description="Aprende desarrollo web desde cero"
+  image="/bootcamps/frontend.webp"
+>
+  <main class="">
+    <img src="/bootcamps/frontend.webp" alt="" />
+    <SectionContainer class="p-3 md:py-36">
+      <h2 class="text-2xl font-bold mb-8">Bootcamp Frontend Básico</h2>
+
+      <details>
+        <summary> Requisitos previos </summary>
+        <p class="font-serif">
+          El Bootcamp está pensado para estudiantes que quieren arrancar desde 0
+          y aprender desarrollo web Frontend, por lo que se asume que nunca
+          antes has usado HTML, CSS, o JavaScript.
+          <br />
+          Con habilidades básicas de manejo de computadora para instalar programas
+          y, en asistencia de los profesores, pueda configurar su entorno de trabajo.
+          <br />
+          Con ganas de aprender y superarse en el área del desarrollo web, con interés
+          en conocer y aplicar tecnologías para la creación de páginas web. Con un
+          sentido aventurero por explorar y practicar los conceptos aprendidos en
+          clase.
+        </p>
+      </details>
+      <details>
+        <summary> Perfil de egreso </summary>
+        <p class="font-serif">
+          Al completar las 4 semanas del Bootcamp podrás utilizar HTML, CSS, y
+          JavaScript en la creación de páginas web interactivas básicas.
+          <br />
+          Serás capaz de participar en proyectos de desarrollo web, trabajando en
+          la parte del Frontend para la creación de aplicaciones web. Conocerás los
+          fundamentos asociados al rol Frontend como protocolos de red, herramientas
+          de desarrollo, herramientas para identificar errores, y muchas más. Podrás
+          usar Web APIs para añadir capacidades modernas a tus aplicaciones web,
+          tales como almacenamiento local, elementos multimedia, entre otros. Serás
+          capaz de usar CSS en la elaboración de esquemas de diseño que se adapten
+          a las distintas pantallas en que una página web puede ser visualizada.
+        </p>
+      </details>
+    </SectionContainer>
+    <SectionContainer class="p-3 md:py-36">
+      <div class="bg-image">
+        <h2 class="text-2xl font-bold mb-8">Tecnologías a trabajar</h2>
+
+        <div class="flex flex-wrap gap-6 justify-center">
+          <img src="/tecnologies/git.png" alt="" class="w-20 h-20" />
+          <img src="/tecnologies/github.png" alt="" class="w-20 h-20" />
+          <img src="/tecnologies/html-5.png" alt="" class="w-20 h-20" />
+          <img src="/tecnologies/css-3.png" alt="" class="w-20 h-20" />
+          <img src="/tecnologies/js.png" alt="" class="w-20 h-20" />
+        </div>
+      </div>
+    </SectionContainer>
+
+    <div class="clip-diagonal p-6 bg-black text-white text-center">
+      <h3>Lo qué aprenderás en este bootcamp</h3>
+    </div>
+
+    <SectionContainer
+      class="clip-diagonal bg-black p-3 md:py-36 text-white font-serif"
+    >
+      <details>
+        <summary>Módulo 1: Introducción a Git y GitHub</summary>
+        <ul>
+          <li>Conceptos básicos de control de versiones</li>
+          <li>Instalación y configuración de Git</li>
+          <li>
+            Comandos esenciales de Git: <code>init</code>, <code>add</code>, <code
+              >commit</code
+            >, <code>push</code>, <code>pull</code>
+          </li>
+          <li>Creación y gestión de repositorios en GitHub</li>
+          <li>Clonar repositorios y contribuir a proyectos</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Módulo 2: HTML</summary>
+        <ul>
+          <li>Estructura básica de una página web</li>
+          <li>Elementos, atributos y etiquetas</li>
+          <li>Listas, tablas y formularios</li>
+          <li>Enlaces e imágenes</li>
+          <li>Semántica en HTML5</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Módulo 3: CSS</summary>
+        <ul>
+          <li>Selectores, propiedades y valores</li>
+          <li>Box model y posicionamiento</li>
+          <li>Flexbox y Grid</li>
+          <li>Animaciones y transiciones</li>
+          <li>Responsive Design con media queries</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Módulo 4: JavaScript Básico</summary>
+        <ul>
+          <li>Sintaxis básica y tipos de datos</li>
+          <li>Operadores, condicionales y bucles</li>
+          <li>Funciones y eventos</li>
+          <li>Manipulación del DOM</li>
+          <li>Introducción a Fetch API</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Módulo 5: Formularios y Responsive Design</summary>
+        <ul>
+          <li>Creación de formularios con HTML y CSS</li>
+          <li>Validación de formularios con JavaScript</li>
+          <li>Responsive Design con media queries</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Módulo 6: Deploy con Vercel/Netlify</summary>
+        <ul>
+          <li>Introducción a Vercel y Netlify</li>
+          <li>Conectar un repositorio de GitHub</li>
+          <li>Configuraciones básicas de deploy</li>
+          <li>Publicación y actualización de sitios web</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Proyecto Final</summary>
+        <p>
+          Desarrollo de un sitio web personal o una pequeña aplicación web que
+          integre los conocimientos adquiridos en HTML, CSS y JavaScript, con un
+          repositorio en GitHub y deploy a través de Vercel o Netlify.
+        </p>
+      </details>
+    </SectionContainer>
+  </main>
+
+  <style>
+    .bg-image {
+      background-image: url("https://sox.sg/wp-content/uploads/2022/02/single-dotted.png");
+      background-repeat: repeat;
+      padding: 60px 15px;
+      background-size: auto;
+    }
+
+    li {
+      list-style: disc;
+      margin-top: 0.5rem;
+      color: #ffe900;
+    }
+
+    details {
+      margin-bottom: 1rem;
+    }
+
+    .clip-diagonal {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    @media screen and (max-width: 768px) {
+      .bg-image {
+        padding: 0 0 40px;
+        background-size: 5%;
+      }
+    }
+  </style>
+</Layout>

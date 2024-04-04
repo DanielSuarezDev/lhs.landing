@@ -6,6 +6,10 @@ import Link from "./icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 import ReactNative from "./icons/ReactNative.astro";
 import Vite from "./icons/Vite.astro";
+import Bible from "./icons/bible.astro";
+import Personalized from "./icons/Personalized.astro";
+import Autodidacted from "./icons/Autodidacted.astro";
+import Idea from "./icons/Idea.astro";
 
 const TAGS = {
   VITE: {
@@ -35,37 +39,38 @@ const PROJECTS = [
     description:
       "Plataforma para la gestión de comunidades de vecinos. Creada con Vite, React , Tailwind CSS y React Native para la app móvil, con más de 100K usuarios activos.",
     link: "https://jausme.com/",
-    image: "/projects/jausme.png",
+    Image: Bible,
   },
   {
     title: "Semipersonalizado",
     description:
       "Plataforma gratuita para la gestión de finanzas a la hora de mercar. Con más de 500 usuarios activos. Creada con Next.js y Tailwind CSS.",
     link: "https://www.spendwiser.click/",
-    image: "/projects/spendWiser.png",
+    Image: Personalized,
   },
   {
     title: "Autodidacta",
     description:
       "App para la gestión de mantenimientos de vehículos donde ha impactado a mas de 600K taxistas y expandiendose a vehículos particulares. Creada con React Native y Tailwind CSS.",
     link: "https://play.google.com/store/apps/details?id=com.gogo.beatlab&pli=1",
-    image: "/projects/gogo.png",
+    Image: Autodidacted
   },
   {
     title: "Enfasis",
     description:
       "App para la gestión de mantenimientos de vehículos donde ha impactado a mas de 600K taxistas y expandiendose a vehículos particulares. Creada con React Native y Tailwind CSS.",
     link: "https://play.google.com/store/apps/details?id=com.gogo.beatlab&pli=1",
-    image: "/projects/gogo.png",
+    Image: Idea
   },
 ];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, link }) => (
-      <article class="bg-white card p-8 text-center">
-        <img src={image} alt={title} class="w-32 h-32" />  
+    PROJECTS.map(({ Image, title, description, link }) => (
+      <article class="bg-white card p-8 text-center flex flex-col justify-center items-center h-60 mb-10">
+        
+        <Image />
 
         <h3 class="text-2xl">{title}</h3>
         <p class="font-extralight font-serif text-xs">{description}</p>
