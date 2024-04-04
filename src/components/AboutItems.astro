@@ -1,0 +1,84 @@
+---
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import ReactNative from "./icons/ReactNative.astro";
+import Vite from "./icons/Vite.astro";
+
+const TAGS = {
+  VITE: {
+    name: "Vite",
+    class: "bg-black text-white",
+    icon: Vite,
+  },
+  REACT_NATIVE: {
+    name: "React Native",
+    class: "bg-[#61DAFB] text-black",
+    icon: ReactNative,
+  },
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Biblia",
+    description:
+      "Plataforma para la gestión de comunidades de vecinos. Creada con Vite, React , Tailwind CSS y React Native para la app móvil, con más de 100K usuarios activos.",
+    link: "https://jausme.com/",
+    image: "/projects/jausme.png",
+  },
+  {
+    title: "Semipersonalizado",
+    description:
+      "Plataforma gratuita para la gestión de finanzas a la hora de mercar. Con más de 500 usuarios activos. Creada con Next.js y Tailwind CSS.",
+    link: "https://www.spendwiser.click/",
+    image: "/projects/spendWiser.png",
+  },
+  {
+    title: "Autodidacta",
+    description:
+      "App para la gestión de mantenimientos de vehículos donde ha impactado a mas de 600K taxistas y expandiendose a vehículos particulares. Creada con React Native y Tailwind CSS.",
+    link: "https://play.google.com/store/apps/details?id=com.gogo.beatlab&pli=1",
+    image: "/projects/gogo.png",
+  },
+  {
+    title: "Enfasis",
+    description:
+      "App para la gestión de mantenimientos de vehículos donde ha impactado a mas de 600K taxistas y expandiendose a vehículos particulares. Creada con React Native y Tailwind CSS.",
+    link: "https://play.google.com/store/apps/details?id=com.gogo.beatlab&pli=1",
+    image: "/projects/gogo.png",
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, link }) => (
+      <article class="bg-white card p-8 text-center">
+        <img src={image} alt={title} class="w-32 h-32" />  
+
+        <h3 class="text-2xl">{title}</h3>
+        <p class="font-extralight font-serif text-xs">{description}</p>
+      </article>
+    ))
+  }
+
+  <style>
+    .card {
+      background-color: #fff;
+      border: 1px solid #000;
+      box-shadow: -2px 2px #000;
+      border-radius: 9px;
+    }
+  </style>
+</div>

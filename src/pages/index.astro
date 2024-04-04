@@ -6,12 +6,13 @@ import Briefcase from "@/components/icons/Briefcase.astro";
 import CodeIcon from "@/components/icons/Code.astro";
 import Experience from "@/components/Experience.astro";
 import ProfileCheck from "@/components/icons/ProfileCheck.astro";
-import Projects from "@/components/Projects.astro";
+import AboutItems from "@/components/AboutItems.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import Hero from "@/components/Hero.astro";
 import SpeedInsights from "@vercel/speed-insights/astro";
 import BadgeFloat from "@/components/BadgeFloat.astro";
 import Banner from "@/components/Banner.astro";
+import Bootcaps from "@/components/Bootcamps.astro";
 ---
 
 <Layout
@@ -19,40 +20,48 @@ import Banner from "@/components/Banner.astro";
   description="Centro de tutorias semipersonalizada"
   image="/images/logo.jpg"
 >
-  <main class="w-full bg-[#ffe900] h-screen">
-      <Hero />
+  <main class="w-full bg-[#ffe900] h-screen" id="inicio">
+    <Hero />
   </main>
-  <div class="space-y-24 bg-image">
-    <SectionContainer id="experiencia">
+
+  <div class="clip-diagonal p-6 bg-black text-white text-center">
+    <h2>Proverbios 22:6</h2>
+  </div>
+
+  <div class="">
+    <SectionContainer id="nosotros" class="p-4 px-6">
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
-        <Briefcase class="size-8" />
-        Experiencia laboral
-      </h2>
-      <Experience />
-    </SectionContainer>
-
-    <SectionContainer id="proyectos">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
-      >
-        <CodeIcon class="size-7" />
-        Proyectos
-      </h2>
-      <Projects />
-    </SectionContainer>
-
-    <SectionContainer id="sobre-mi">
-      <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
-      >
-        <ProfileCheck class="size-8" />
-        Sobre mí
+        Nosotros
       </h2>
       <AboutMe />
     </SectionContainer>
   </div>
+
+  <div class="bg-image">
+    <SectionContainer class="p-4 px-6">
+      <AboutItems />
+    </SectionContainer>
+  </div>
+
+  <div class="clip-diagonal p-6 bg-black text-white text-center">
+    <h3>La educación es el arma más poderosa que puedes usar para cambiar el mundo</h3>
+  </div>
+
+  <div class="w-full bg-[#ffe900]">
+
+    <SectionContainer id="bootcamps" class="p-4 px-6">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        Bootcamps
+      </h2>
+      <Bootcaps />
+    </SectionContainer>
+
+  </div>
+
   <SpeedInsights />
 
   <style>
@@ -61,6 +70,10 @@ import Banner from "@/components/Banner.astro";
       background-repeat: repeat;
       padding: 60px 15px;
       background-size: auto;
+    }
+
+    .clip-diagonal {
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     }
 
     @media screen and (max-width: 768px) {
