@@ -1,4 +1,7 @@
 ---
+import Badge from "./Badge.astro";
+import BadgeFloat from "./BadgeFloat.astro";
+
 const personalImageAlt = "Daniel Suarez";
 
 const PROJECTS = [
@@ -13,18 +16,25 @@ const PROJECTS = [
     title: "Bootcamp Emprendimiento",
     description:
       "Aprenderás a crear tu propio negocio, desde la idea hasta la ejecución junto a expertos en el area de....",
-    link: "https://www.spendwiser.click/",
+    link: "#bootcamps",
     image: "/bootcamps/emprendimiento.webp",
+    badge: "Pronto",
   },
 ];
 ---
 
-<article
-  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+<p
+  class="hidden sm:flex sm:justify-center sm:text-xl font-extralight font-serif sm:mb-20"
 >
-  <div
-    class="[&>p]:mb-4 [&>p>strong]:text-purple-700 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal md:order-1 text-center font-extralight font-serif"
-  >
+  Nos gusta compartir conocimiento y experiencias, por eso hemos creado una
+  serie de bootcamps y talleres para que puedas aprender de la mano de expertos
+  en diferentes áreas.
+</p>
+
+<article
+  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 sm:flex-row"
+>
+  <div class="sm:hidden text-center font-extralight font-serif">
     <p>
       Nos gusta compartir conocimiento y experiencias, por eso hemos creado una
       serie de bootcamps y talleres para que puedas aprender de la mano de
@@ -32,16 +42,21 @@ const PROJECTS = [
     </p>
   </div>
 
-  <div class="flex flex-col gap-y-16">
+  <div class="flex flex-col gap-y-16 order-2 sm:w-[800px] sm:flex-row sm:gap-6">
     {
-      PROJECTS.map(({ image, title, description, link }) => (
-        <article class="bg-white card">
+      PROJECTS.map(({ image, title, description, link, badge }) => (
+        <article class="bg-white card relative">
           <img src={image} alt={title} class="w-full" />
           <div class="p-4">
             <h3 class="text-1xl">{title}</h3>
             <p class="font-extralight font-serif text-xs mb-4">{description}</p>
-            <a href={link} class="text-blue-500 mt-4">Ver más</a>
+            <a href={link} class="text-blue-500 mt-4">
+              Ver más
+            </a>
           </div>
+         {badge && <div class="m-3">
+            <Badge>{badge}</Badge>
+          </div>}
         </article>
       ))
     }

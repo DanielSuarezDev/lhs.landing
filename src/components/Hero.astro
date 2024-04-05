@@ -1,38 +1,45 @@
 ---
-const personalImageAlt = "Miguel Ángel"
-import Badge from "@/components/Badge.astro"
-import LinkedInIcon from "@/components/icons/LinkedIn.astro"
-import MailIcon from "@/components/icons/Mail.astro"
-import SocialPill from "@/components/SocialPill.astro"
+const personalImageAlt = "Miguel Ángel";
+import Badge from "@/components/Badge.astro";
+import LinkedInIcon from "@/components/icons/LinkedIn.astro";
+import MailIcon from "@/components/icons/Mail.astro";
+import SocialPill from "@/components/SocialPill.astro";
 ---
 
-<div class="w-full relative">
-
-  
-  <div class="">
-    <img decoding="async" class="mt-32" src="https://sox.sg/wp-content/themes/sox/assets/images/paper-background.png" alt="background">
-    <img src="/hero/hero-background-1.png" alt="Miguel Ángel" class="w-full absolute" />
+<div class="w-full relative sm:flex sm:justify-center sm:items-center">
+  <div class="relative">
     <img
-      class="absolute top-16 left-6 w-[350px] rotate-6"
+      decoding="async"
+      class="mt-32 sm:mt-0 relative"
+      src="https://sox.sg/wp-content/themes/sox/assets/images/paper-background.png"
+      alt="background"
+    />
+    <img
+      src="/hero/hero-background-1.png"
+      alt="Miguel Ángel"
+      class="w-full absolute sm:hidden"
+    />
+    <img
+      class="absolute top-16 left-6 w-[350px] rotate-6  sm:w-4/5 sm:left-24 sm:top-32"
       src="/hero.jpg"
       alt={personalImageAlt}
     />
   </div>
 
   <div class="px-2 text-center mt-10">
-    <h1 class="text-4xl font-bold mt-8">Lighthouse School</h1>
+    <h1 class="text-4xl font-bold mt-8 sm:text-6xl">Lighthouse School</h1>
     <p class="text-lg mt-4">
       Guiando al conocimiento... Formando Corazones ... Entregando siervos
     </p>
+    <nav class="flex flex-wrap gap-4 mt-8 justify-center ">
+      <SocialPill href="mailto:danielsuarez3114@gmail.com">
+        <MailIcon class="size-4" />
+        Instagram
+      </SocialPill>
+      <SocialPill href="https://www.linkedin.com/in/daniel-suarez-dev/">
+        <LinkedInIcon class="size-4" />
+        Plataforma
+      </SocialPill>
+    </nav>
   </div>
-  <nav class="flex flex-wrap gap-4 mt-8 justify-center">
-    <SocialPill href="mailto:danielsuarez3114@gmail.com">
-      <MailIcon class="size-4" />
-      Instagram
-    </SocialPill>
-    <SocialPill href="https://www.linkedin.com/in/daniel-suarez-dev/">
-      <LinkedInIcon class="size-4" />
-      Plataforma
-    </SocialPill>
-  </nav>
 </div>
