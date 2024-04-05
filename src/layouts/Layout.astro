@@ -25,19 +25,19 @@ const { description, title, image } = Astro.props;
         basic: {
           title: title,
           type: "article",
-          image: `https://www.danielsuarez.dev${image}`, // Asegúrate de formatear correctamente la URL
+          image: `https://www.lhschool.co/${image}`, // Asegúrate de formatear correctamente la URL
         },
       }}
       twitter={{
         creator: "@DanielSuarezDev",
-        image: `https://www.danielsuarez.dev${image}`,
+        image: `https://www.lhschool.co/${image}`,
       }}
       extend={{
         link: [{ rel: "icon", href: "/favicon.ico" }],
         meta: [
           {
             name: "twitter:image",
-            content: `https://www.danielsuarez.dev${image}`,
+            content: `https://www.lhschool.co/${image}`,
           },
           { name: "twitter:title", content: title },
           { name: "twitter:description", content: description },
